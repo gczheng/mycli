@@ -1,5 +1,82 @@
-TBD:
-====
+TBD
+===
+
+Internal:
+---------
+
+* Add Python 3.7 trove classifier (Thanks: [Thomas Roten]).
+* Fix pytest in Fedora mock (Thanks: [Dick Marinus]).
+
+Features:
+---------
+
+* Add Token.Prompt/Continuation (Thanks: [Dick Marinus]).
+* Don't reconnect when switching databases using use (Thanks: [Angelo Lupo]).
+
+1.18.2
+======
+
+Bug Fixes:
+----------
+
+* Fixes database reconnecting feature (Thanks: [Yang Zou]).
+
+Internal:
+---------
+
+* Update Twine version to 1.12.1 (Thanks: [Thomas Roten]).
+* Fix warnings for running tests on Python 3.7 (Thanks: [Dick Marinus]).
+* Clean up and add behave logging (Thanks: [Dick Marinus]).
+
+1.18.1
+======
+
+Features:
+---------
+
+* Add Keywords: TINYINT, SMALLINT, MEDIUMINT, INT, BIGINT (Thanks: [QiaoHou Peng]).
+
+Internal:
+---------
+
+* Update prompt toolkit (Thanks: [Jonathan Slenders], [Irina Truong], [Dick Marinus]).
+
+1.18.0
+======
+
+Features:
+---------
+
+* Display server version in welcome message (Thanks: [Irina Truong]).
+* Set `program_name` connection attribute (Thanks: [Dick Marinus]).
+* Use `return` to terminate a generator for better Python 3.7 support (Thanks: [Zhongyang Guan]).
+* Add `SAVEPOINT` to SQLCompleter (Thanks: [Huachao Mao]).
+* Connect using a SSH transport (Thanks: [Dick Marinus]).
+* Add `FROM_UNIXTIME` and `UNIX_TIMESTAMP` to SQLCompleter (Thanks: [QiaoHou Peng])
+* Search `${PWD}/.myclirc`, then `${HOME}/.myclirc`, lastly `/etc/myclirc` (Thanks: [QiaoHao Peng])
+
+Bug Fixes:
+----------
+
+* When DSN is used, allow overrides from mycli arguments (Thanks: [Dick Marinus]).
+* A DSN without password should be allowed (Thanks: [Dick Marinus])
+
+Bug Fixes:
+----------
+
+* Convert `sql_format` to unicode strings for py27 compatibility (Thanks: [Dick Marinus]).
+* Fixes mycli compatibility with pbr (Thanks: [Thomas Roten]).
+* Don't align decimals for `sql_format` (Thanks: [Dick Marinus]).
+
+Internal:
+---------
+
+* Use fileinput (Thanks: [Dick Marinus]).
+* Enable tests for Python 3.7 (Thanks: [Thomas Roten]).
+* Remove `*.swp` from gitignore (Thanks: [Dick Marinus]).
+
+1.17.0:
+=======
 
 Features:
 ----------
@@ -17,6 +94,14 @@ Bug Fixes:
 * Don't crash if the log/history file directories don't exist (Thanks: [Thomas Roten]).
 * Unquote dsn username and password (Thanks: [Dick Marinus]).
 * Output `Password:` prompt to stderr (Thanks: [ushuz]).
+* Mark `alter` as a destructive query (Thanks: [Dick Marinus]).
+* Quote CSV fields (Thanks: [Thomas Roten]).
+* Fix `thanks_picker` (Thanks: [Dick Marinus]).
+
+Internal:
+---------
+
+* Refactor Destructive Warning behave tests (Thanks: [Dick Marinus]).
 
 
 1.16.0:

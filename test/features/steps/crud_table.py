@@ -40,18 +40,12 @@ def step_select_from_table(context):
 def step_delete_from_table(context):
     """Send deete from table."""
     context.cli.sendline('''delete from a where x = 'yyy';''')
-    wrappers.expect_exact(
-        context, 'You\'re about to run a destructive command.\r\nDo you want to proceed? (y/n):', timeout=2)
-    context.cli.sendline('y')
 
 
 @when('we drop table')
 def step_drop_table(context):
     """Send drop table."""
     context.cli.sendline('drop table a;')
-    wrappers.expect_exact(
-        context, 'You\'re about to run a destructive command.\r\nDo you want to proceed? (y/n):', timeout=2)
-    context.cli.sendline('y')
 
 
 @then('we see table created')
@@ -82,7 +76,7 @@ def step_see_data_selected(context):
             +-----+\r
             | yyy |\r
             +-----+\r
-            """), timeout=1)
+            """), timeout=2)
     wrappers.expect_exact(context, '1 row in set', timeout=2)
 
 
@@ -114,5 +108,5 @@ def step_see_null_selected(context):
             +--------+\r
             | <null> |\r
             +--------+\r
-            """), timeout=1)
+            """), timeout=2)
     wrappers.expect_exact(context, '1 row in set', timeout=2)
